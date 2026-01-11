@@ -1,56 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Static Page</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My Static Page</title>
+		<style>
+			body {
+				font-family: sans-serif;
+				background-color: #f4f4f4;
+				margin: 0;
+				padding: 20px;
+			}
 
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+			.container {
+				max-width: 600px;
+				margin: auto;
+				background-color: #ffffff;
+				padding: 20px;
+				border-radius: 8px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
 
-        h1 {
-            color: #333;
-            margin-top: 0;
-            margin-bottom: 30px;
-        }
+			h1 {
+				color: #333;
+				margin-top: 0;
+				margin-bottom: 30px;
+			}
 
-        a {
-            padding: 4px;
-        }
-    </style>
-    <script>
-        function getFaviconUrl(url, size = 64) {
-            // Note: The URL parameter should be encoded.
-            const encodedUrl = encodeURIComponent(url);
-            // This is a widely used, though unofficial, Google service.
-            return `https://www.google.com/s2/favicons?domain=${encodedUrl}&sz=${size}`;
-        }
-    </script>
-</head>
-<body>
-<div class="container">
-    <h1>Larry's Links</h1>
-    <div style="display: flex; flex-direction: column; gap: 20px;">
-        <div style="display: flex; align-items: center;">
-            <img src="https://www.google.com/s2/favicons?domain=https://www.nicoletbank.com/&sz=64" width="16">
-            <a href="https://www.nicoletbank.com/" target="_blank">Nicolet Retail</a>
-        </div>
-        <a href="https://4securecorp.ufsdata.com/EBC_EBC1151/Login/075917937/1" target="_blank">Nicolet Business</a>
-        <a href="https://client.schwab.com/Areas/Access/Login" target="_blank">Schwab</a>
-    </div>
-</div>
-</body>
+			a {
+				padding: 4px;
+			}
+		</style>
+		<script>
+			function getFaviconUrl(url, size = 64) {
+				// Note: The URL parameter should be encoded.
+				const encodedUrl = encodeURIComponent(url);
+				// This is a widely used, though unofficial, Google service.
+				return `https://www.google.com/s2/favicons?domain=${encodedUrl}&sz=${size}`;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Larry's Links</h1>
+			<div style="display: flex; flex-direction: column; gap: 20px">
+				<div style="display: flex; align-items: center">
+					<img
+						src="https://www.google.com/s2/favicons?domain=https://www.nicoletbank.com/&sz=64"
+						width="16"
+					/>
+					<a href="https://www.nicoletbank.com/" target="_blank">Nicolet Retail</a>
+				</div>
+				<a
+					href="https://4securecorp.ufsdata.com/EBC_EBC1151/Login/075917937/1"
+					target="_blank"
+					>Nicolet Business</a
+				>
+				<a href="https://client.schwab.com/Areas/Access/Login" target="_blank">Schwab</a>
+			</div>
+		</div>
+	</body>
 </html>

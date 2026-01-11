@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+:root {
+	--light-gray: #f4f4f4;
+}
+
+body {
+	background-color: var(--light-gray);
+	font-family: Roboto, sans-serif;
+	font-size: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 16px;
+}
+
+h1 {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 26px;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+h5 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+h6 {
+	font-size: 20px;
+	font-weight: normal;
+}
