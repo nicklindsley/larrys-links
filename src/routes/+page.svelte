@@ -116,7 +116,7 @@
 	];
 </script>
 
-<div class="flex min-w-150 flex-col gap-5 rounded-2xl bg-white p-5 shadow">
+<div class="flex flex-col gap-5 rounded-2xl bg-white p-5 shadow md:min-w-150">
 	<h1>Larry's Links</h1>
 	{#each linkSections as linkSection (linkSection.title)}
 		<LinkSection {...linkSection} />
