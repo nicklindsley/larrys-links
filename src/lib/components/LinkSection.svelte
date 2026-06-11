@@ -1,20 +1,16 @@
 <script lang="ts">
 	import Link from '$lib/components/Link.svelte';
+	import Video from '$lib/components/Video.svelte';
 	import type { ComponentProps } from 'svelte';
 
-	type LinkProps = {
-		title: string;
-		links: ComponentProps<typeof Link>[];
-	};
+	type LinkProps = ComponentProps<typeof Link> & ComponentProps<typeof Video>;
 
-	const { title, links }: LinkProps = $props();
+	const props: LinkProps = $props();
 </script>
 
-<div class="flex flex-col gap-3">
-	<h4>{title}</h4>
-	<div class="flex flex-col gap-3">
-		{#each links as link (link.name)}
-			<Link {...link} />
-		{/each}
-	</div>
+<div class="col-span-2 grid grid-cols-subgrid gap-5">
+	<Link {...props} />
+	{#if props.video}
+		<Video video={props.video} />
+	{/if}
 </div>

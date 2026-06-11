@@ -1,8 +1,12 @@
 <script lang="ts">
-	import LinkSection from '$lib/components/LinkSection.svelte';
 	import type { ComponentProps } from 'svelte';
+	import LinkSection from '$lib/components/LinkSection.svelte';
+	import * as Videos from '$lib/assets/videos';
 
-	const linkSections: ComponentProps<typeof LinkSection>[] = [
+	const linkGroups: {
+		title: string;
+		links: ComponentProps<typeof LinkSection>[];
+	}[] = [
 		{
 			title: 'Finance',
 			links: [
@@ -10,46 +14,22 @@
 					name: 'Nicolet',
 					url: 'https://4securecorp.ufsdata.com/EBC_EBC1151/Login/075917937/1',
 					faviconUrl: 'https://www.nicoletbank.com/',
+					video: Videos.nicolet,
+					instructions: [
+						'Click the link above',
+						'The password should populate automatically',
+						'Click "Log In"',
+					],
 				},
-				{ name: 'Schwab', url: 'https://client.schwab.com/Areas/Access/Login' },
 				{
 					name: 'Fidelity',
 					url: 'https://workplaceservices.fidelity.com/mybenefits/navstation/navigation#/',
-				},
-				{ name: 'American Express', url: 'https://global.americanexpress.com/overview' },
-				{ name: 'Capital One', url: 'https://www.capitalone.com/' },
-				{ name: 'FNBO', url: 'https://www.fnbo.com/' },
-				{ name: 'CLA', url: 'https://www.clientaxcess.com/#/login' },
-				{ name: 'Wi DOR Tax', url: 'https://tap.revenue.wi.gov/mta/_/' },
-			],
-		},
-		{
-			title: 'Insurance',
-			links: [
-				{
-					name: 'Acuity',
-					url: 'https://www.acuity.com/sso/editProfile',
-				},
-			],
-		},
-		{
-			title: 'Utilities',
-			links: [
-				{
-					name: 'Spectrum',
-					url: 'https://www.spectrum.net/account-summary',
-				},
-				{
-					name: 'Verizon',
-					url: 'https://secure.verizon.com/signin',
-				},
-				{
-					name: 'WPS',
-					url: 'https://www.wisconsinpublicservice.com/secure/auth/l/acct/summary_accounts',
-				},
-				{
-					name: 'SiriusXM',
-					url: 'https://care.siriusxm.com/accountcenter/home',
+					video: Videos.fidelity,
+					instructions: [
+						'Click the link above',
+						'The password should populate automatically',
+						'Click "Log In"',
+					],
 				},
 			],
 		},
@@ -57,21 +37,32 @@
 			title: 'Health',
 			links: [
 				{
-					name: 'Kemper Patient Portal',
-					url: 'https://kempercogwell.md-hq.com/',
-					faviconUrl: 'https://kemperwellness.com/',
-				},
-				{
 					name: 'Aurora',
 					url: 'https://livewell.aah.org/Chart/Home/',
+					video: Videos.aurora,
+					instructions: [
+						'Click the link above',
+						'The password should populate automatically',
+						'Click "Log In"',
+						`If it looks like it logs you in here, you're done! Otherwise go to step 5`,
+						'Click "Send to my email"',
+						'Check your email for an email from "LiveWell"',
+						'Open the email and find the code inside',
+						'Type that code into the box that says "Enter code"',
+						'Click "Verify"',
+					],
 				},
 				{
 					name: 'Emplify',
 					url: 'https://mychart.emplifyhealth.org/MyChart/Home/',
-				},
-				{
-					name: 'Mayo Clinic',
-					url: 'https://www.mayoclinic.org/',
+					video: Videos.emplify,
+					instructions: [
+						'Click the link above',
+						'The password will NOT automatically populate. Click inside the "username" box and click the popup that says "Bellin / Emplify"',
+						'Click "Continue"',
+						'The password box should now show up. Click the popup that says "Bellin / Emplify" again',
+						'Click "Log in"',
+					],
 				},
 			],
 		},
@@ -81,35 +72,28 @@
 				{
 					name: 'Green Bay Country Club',
 					url: 'https://www.greenbaycountryclub.com/',
+					video: Videos.greenBayCountryClub,
+					instructions: [
+						'Click the link above',
+						'Click "LOGIN" in the top right',
+						'The password should populate automatically',
+						'Click "SIGN IN"',
+						'To get to the tee sheet, click "FORETEES"',
+						`Hover over "Tee Times" at the top and click "Today's Tee Sheet"`,
+						'To get to your tee times, hover over "Tee Times" and click "My Tee Times / List"',
+					],
 				},
 				{
 					name: 'Horseshoe Bay Golf Club',
-					url: 'https://www.horseshoebaygolfclub.net/Home.aspx',
-				},
-				{
-					name: 'WSGA',
-					url: 'http://www.wsga.org/',
-				},
-			],
-		},
-		{
-			title: 'Other',
-			links: [
-				{
-					name: 'Amazon',
-					url: 'https://www.amazon.com/',
-				},
-				{
-					name: 'Microsoft',
-					url: 'https://www.microsoft.com/en-us/',
-				},
-				{
-					name: 'BMW',
-					url: 'https://mybmw.bmwusa.com/home',
-				},
-				{
-					name: 'Passwords',
-					url: 'https://docs.google.com/spreadsheets/d/1JesaEZphkBE6fHhjZ711EsEjC-QDkUrNml-KmeJI0pw/edit?gid=0#gid=0',
+					url: 'https://www.horseshoebaygolfclub.net/login.aspx',
+					video: Videos.horseshoeBay,
+					instructions: [
+						'Click the link above',
+						'The password should populate automatically',
+						'Click "Login"',
+						'To get to the tee sheet, click "Tee Times" on the lower half of the screen (you may need to scroll down slightly)',
+						'To got to your tee times, click "My Reservations" at the top of the screen',
+					],
 				},
 			],
 		},
@@ -118,7 +102,16 @@
 
 <div class="flex flex-col gap-5 rounded-2xl bg-white p-5 shadow md:min-w-150">
 	<h1>Larry's Links</h1>
-	{#each linkSections as linkSection (linkSection.title)}
-		<LinkSection {...linkSection} />
-	{/each}
+	<div class="grid grid-cols-[auto_auto] gap-5">
+		{#each linkGroups as linkGroup, groupIndex (linkGroup.title)}
+			<div class="col-span-2 grid grid-cols-subgrid gap-5">
+				{#each linkGroup.links as link, linkIndex (link.name)}
+					{#if groupIndex > 0 || linkIndex > 0}
+						<div class="col-span-2 border border-solid"></div>
+					{/if}
+					<LinkSection {...link} />
+				{/each}
+			</div>
+		{/each}
+	</div>
 </div>
