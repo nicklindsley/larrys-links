@@ -37,6 +37,18 @@
 			title: 'Health',
 			links: [
 				{
+					name: 'Emplify',
+					url: 'https://mychart.emplifyhealth.org/MyChart/Home/',
+					video: Videos.emplify,
+					instructions: [
+						'Click the link above',
+						'The password will NOT automatically populate. Click inside the "username" box and click the popup that says "Bellin / Emplify"',
+						'Click "Continue"',
+						'The password box should now show up. Click the popup that says "Bellin / Emplify" again',
+						'Click "Log in"',
+					],
+				},
+				{
 					name: 'Aurora',
 					url: 'https://livewell.aah.org/Chart/Home/',
 					video: Videos.aurora,
@@ -50,18 +62,6 @@
 						'Open the email and find the code inside',
 						'Type that code into the box that says "Enter code"',
 						'Click "Verify"',
-					],
-				},
-				{
-					name: 'Emplify',
-					url: 'https://mychart.emplifyhealth.org/MyChart/Home/',
-					video: Videos.emplify,
-					instructions: [
-						'Click the link above',
-						'The password will NOT automatically populate. Click inside the "username" box and click the popup that says "Bellin / Emplify"',
-						'Click "Continue"',
-						'The password box should now show up. Click the popup that says "Bellin / Emplify" again',
-						'Click "Log in"',
 					],
 				},
 			],
