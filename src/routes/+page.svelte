@@ -21,16 +21,16 @@
 						'Click "Log In"',
 					],
 				},
-				{
-					name: 'Fidelity',
-					url: 'https://workplaceservices.fidelity.com/mybenefits/navstation/navigation#/',
-					video: Videos.fidelity,
-					instructions: [
-						'Click the link above',
-						'The password should populate automatically',
-						'Click "Log In"',
-					],
-				},
+				// {
+				// 	name: 'Fidelity',
+				// 	url: 'https://workplaceservices.fidelity.com/mybenefits/navstation/navigation#/',
+				// 	video: Videos.fidelity,
+				// 	instructions: [
+				// 		'Click the link above',
+				// 		'The password should populate automatically',
+				// 		'Click "Log In"',
+				// 	],
+				// },
 			],
 		},
 		{
