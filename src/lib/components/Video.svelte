@@ -7,7 +7,14 @@
 </script>
 
 <div class="flex justify-center">
-	<video class="rounded-xl" controls loop width="700">
+	<video
+		class="rounded-xl"
+		width="700"
+		muted
+		controls
+		controlslist="nodownload"
+		disableremoteplayback
+	>
 		<source src={video} />
 	</video>
 </div>
